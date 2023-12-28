@@ -4,6 +4,14 @@ import scala.annotation.tailrec
 
 // TODO: Create as extension methods.
 object MessingWithNumbers:
+  extension (arr: Array[Int])
+    def exSum: Int =
+      exDoSum(arr)
+
+    @tailrec private def exDoSum(recArr: Array[Int], sum: Int = 0): Int =
+      if recArr.isEmpty then sum
+      else exDoSum(recArr.tail, sum + recArr.head)
+
   def sum(a: Array[Int]): Int =
     doSum(a)
 

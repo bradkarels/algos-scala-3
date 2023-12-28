@@ -23,3 +23,9 @@ class MessingWithNumbersTest extends FunSuite:
     val obtained1 = MessingWithNumbers.sum(b)
     assertEquals(obtained0, expected = 255)
     assertEquals(obtained1, expected = 3)
+
+  test("sum as recursive extension"):
+    import io.rev27.MessingWithNumbers.exSum // Hmmm, clunky...
+    val obtained = Array(1,2,3).exSum
+    val expected  = 6
+    assertEquals(obtained, expected)
