@@ -2,7 +2,7 @@ package io.rev27
 
 import scala.annotation.tailrec
 
-// TODO: Create as extension methods.
+// TODO: Create (more) as extension methods.
 object MessingWithNumbers:
   extension (arr: Array[Int])
     def exSum: Int =
@@ -11,6 +11,7 @@ object MessingWithNumbers:
     @tailrec private def exDoSum(recArr: Array[Int], sum: Int = 0): Int =
       if recArr.isEmpty then sum
       else exDoSum(recArr.tail, sum + recArr.head)
+  end extension
 
   def sum(a: Array[Int]): Int =
     doSum(a)
