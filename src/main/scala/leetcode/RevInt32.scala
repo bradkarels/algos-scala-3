@@ -42,7 +42,6 @@ object RevInt32:
 
 
 val strToBigInt = (ints: Seq[Int]) =>
-//  val sb = StringBuilder("")
   val sb = new StringBuilder
   for i <- ints do
     sb.append(i)
