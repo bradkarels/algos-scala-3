@@ -13,7 +13,7 @@ class GoodPairsTest extends AnyFlatSpec with should.Matchers:
 
   "good pairs 0" should "count four" in:
     val obtained = GoodPairs.numIdenticalPairs(inputNbrs0)
-    obtained shouldBe expected0
+    obtained should === (expected0)
 
   "good pairs 1" should "count six" in:
     val obtained = GoodPairs.numIdenticalPairs(inputNbrs1)
@@ -21,11 +21,11 @@ class GoodPairsTest extends AnyFlatSpec with should.Matchers:
 
   "good pairs 2" should "count zero" in:
     val obtained = GoodPairs.numIdenticalPairs(inputNbrs2)
-    obtained shouldBe expected2
+    obtained should be (expected2)
 
   "recursive good pairs 0" should "count four" in :
     val obtained = GoodPairs.rNumIdenticalPairs(inputNbrs0)
-    obtained shouldBe expected0
+    obtained shouldEqual expected0
 
   "recursive good pairs 1" should "count six" in :
     val obtained = GoodPairs.rNumIdenticalPairs(inputNbrs1)
